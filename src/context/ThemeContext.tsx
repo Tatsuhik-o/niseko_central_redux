@@ -1,14 +1,13 @@
 import { createContext } from "react";
 import useTheme from "../hooks/useTheme";
-import type { Theme } from "@mui/material";
 import type { TTheme } from "../utils/types";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 
 interface ThemeContextProps {
   children: React.ReactNode;
 }
 
 interface NisekoThemeContextProps {
-  NisekoTheme: Theme;
   currentTheme: TTheme;
   changeTheme: () => void;
 }
@@ -19,10 +18,11 @@ export default function ThemeContext({ children }: ThemeContextProps) {
     undefined
   );
   return (
-    <NisekoThemeContext.Provider
-      value={{ NisekoTheme, currentTheme, changeTheme }}
-    >
-      {children}
-    </NisekoThemeContext.Provider>
+    <ThemeProvider theme={NisekoTheme}>
+      <CssBaseline />
+      <NisekoThemeContext.Provider value={{ currentTheme, changeTheme }}>
+        {children}
+      </NisekoThemeContext.Provider>
+    </ThemeProvider>
   );
 }
