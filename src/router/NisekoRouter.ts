@@ -53,14 +53,6 @@ export const unProtectedRoutes: TRouter = [
     element: Contact,
   },
   {
-    path: "/login",
-    element: Login,
-  },
-  {
-    path: "/signup",
-    element: SignUp,
-  },
-  {
     path: "*",
     element: Not_Found,
   },
@@ -78,5 +70,13 @@ export const protectedRoutes: TRouter = [
   {
     path: "/profile/settings",
     element: Settings,
+  },
+  {
+    path: "/login",
+    element: Login,
+  },
+  {
+    path: "/signup",
+    element: SignUp,
   },
 ];
