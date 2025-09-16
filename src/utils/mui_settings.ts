@@ -17,62 +17,56 @@ declare module "@mui/material/styles" {
 
 export const lightPalette: PaletteOptions = {
   primary: {
-    main: "",
-    contrastText: "",
+    main: "#F06549",
+    contrastText: "#FEFFFF",
   },
   secondary: {
-    main: "",
-    contrastText: "",
+    main: "#FFFFFF",
+    contrastText: "#1F2937",
   },
   hybrid: {
-    main: "",
-    contrastText: "",
+    main: "#E2E8F0",
+    contrastText: "#1F2937",
   },
-  highlight: {
-    main: "",
-    contrastText: "",
-  },
+  divider: "#D1D5DB",
   info: {
-    main: "",
-    contrastText: "",
+    main: "#1F2937",
+    contrastText: "#FFFFFF",
   },
   error: {
-    main: "",
-    contrastText: "",
+    main: "#E53E3E",
+    contrastText: "#FFFFFF",
   },
   success: {
-    main: "",
-    contrastText: "",
+    main: "#1EA659",
+    contrastText: "#FFFFFF",
   },
 };
 
 export const darkPalette: PaletteOptions = {
   primary: {
-    main: "",
-    contrastText: "",
+    main: "#F48C78",
+    contrastText: "#1F2937",
   },
   secondary: {
-    main: "",
-    contrastText: "",
+    main: "#1F2937",
+    contrastText: "#FEFFFF",
   },
   hybrid: {
-    main: "",
-    contrastText: "",
+    main: "#374151",
+    contrastText: "#E5E7EB",
   },
-  highlight: {
-    main: "",
-    contrastText: "",
-  },
+  divider: "#4B5563",
   info: {
-    main: "",
-    contrastText: "",
+    main: "#93C5FD",
+    contrastText: "#1F2937",
   },
   error: {
-    main: "",
-    contrastText: "",
+    main: "#F87171",
+    contrastText: "#1F2937",
   },
   success: {
-    main: "",
-    contrastText: "",
+    main: "#34D399",
+    contrastText: "#1F2937",
   },
 };
