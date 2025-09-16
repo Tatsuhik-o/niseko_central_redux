@@ -1,37 +1,72 @@
-import type { PaletteOptions } from "@mui/material";
+import type {
+  PaletteOptions,
+  PaletteColor,
+  PaletteColorOptions,
+} from "@mui/material";
+
+declare module "@mui/material/styles" {
+  interface Palette {
+    hybrid?: PaletteColor;
+    highlight?: PaletteColor;
+  }
+  interface PaletteOptions {
+    hybrid?: PaletteColorOptions;
+    highlight?: PaletteColorOptions;
+  }
+}
 
 export const lightPalette: PaletteOptions = {
   primary: {
-    main: "#4A637D",
-    contrastText: "#D1D5DB",
+    main: "#F06549",
+    contrastText: "#FEFFFF",
   },
   secondary: {
-    main: "#4D6EC2",
-    contrastText: "#e0e0e0",
+    main: "#FFFFFF",
+    contrastText: "#1F2937",
   },
+  hybrid: {
+    main: "#E2E8F0",
+    contrastText: "#1F2937",
+  },
+  divider: "#D1D5DB",
   info: {
-    main: "rgb(77,110,194, 0.3)",
-    contrastText: "#000",
+    main: "#1F2937",
+    contrastText: "#FFFFFF",
+  },
+  error: {
+    main: "#E53E3E",
+    contrastText: "#FFFFFF",
   },
   success: {
-    main: "#66BB6A",
+    main: "#1EA659",
+    contrastText: "#FFFFFF",
   },
 };
 
 export const darkPalette: PaletteOptions = {
   primary: {
-    main: "#7895B1",
-    contrastText: "#D1D5DB",
+    main: "#F48C78",
+    contrastText: "#1F2937",
   },
   secondary: {
-    main: "#FF6B6B",
-    contrastText: "#ecf0f1",
+    main: "#1F2937",
+    contrastText: "#FEFFFF",
   },
+  hybrid: {
+    main: "#374151",
+    contrastText: "#E5E7EB",
+  },
+  divider: "#4B5563",
   info: {
-    main: "rgb(255,107,107, 0.15)",
-    contrastText: "#fff",
+    main: "#93C5FD",
+    contrastText: "#1F2937",
+  },
+  error: {
+    main: "#F87171",
+    contrastText: "#1F2937",
   },
   success: {
-    main: "#E56448",
+    main: "#34D399",
+    contrastText: "#1F2937",
   },
 };
