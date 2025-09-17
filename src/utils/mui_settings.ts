@@ -28,6 +28,9 @@ export const lightPalette: PaletteOptions = {
     main: "#E2E8F0",
     contrastText: "#1F2937",
   },
+  highlight: {
+    main: "#F9FAFB",
+  },
   divider: "#D1D5DB",
   info: {
     main: "#1F2937",
@@ -55,6 +58,9 @@ export const darkPalette: PaletteOptions = {
   hybrid: {
     main: "#374151",
     contrastText: "#E5E7EB",
+  },
+  highlight: {
+    main: "#111827",
   },
   divider: "#4B5563",
   info: {

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { protectedRoutes, unProtectedRoutes } from "./router/NisekoRouter";
 import ThemeContext from "./context/ThemeContext";
 import Protected from "./layout/Protected";
+import Main from "./layout/Main";
 
 function App() {
   return (
@@ -20,16 +21,18 @@ function App() {
               );
             })}
           </Route>
-          {unProtectedRoutes.map((route) => {
-            const Component = route.element;
-            return (
-              <Route
-                path={route.path}
-                element={<Component />}
-                key={route.path}
-              />
-            );
-          })}
+          <Route element={<Main />}>
+            {unProtectedRoutes.map((route) => {
+              const Component = route.element;
+              return (
+                <Route
+                  path={route.path}
+                  element={<Component />}
+                  key={route.path}
+                />
+              );
+            })}
+          </Route>
         </Routes>
       </ThemeContext>
     </BrowserRouter>

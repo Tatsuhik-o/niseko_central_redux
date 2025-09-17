@@ -31,7 +31,7 @@ const getInitialTheme = (): TTheme => {
 };
 
 export default function useTheme({
-  cooldown = 250,
+  cooldown = 500,
 }: UseThemeProps): UseThemeReturn {
   const [currentTheme, setCurrentTheme] = useState<TTheme>(getInitialTheme);
   const isInCooldown = useRef<boolean>(false);
@@ -56,7 +56,9 @@ export default function useTheme({
   const changeTheme = useCallback(() => {
     if (isInCooldown.current) return;
     isInCooldown.current = true;
-    setCurrentTheme(currentTheme === "light" ? "dark" : "light");
+    setCurrentTheme((currentTheme) =>
+      currentTheme === "light" ? "dark" : "light"
+    );
     setTimeout(() => {
       isInCooldown.current = false;
     }, cooldown);

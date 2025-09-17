@@ -6,6 +6,10 @@ interface NisekoThemeContextProps {
   changeTheme: () => void;
 }
 
-export const NisekoThemeContext = createContext<
-  NisekoThemeContextProps | undefined
->(undefined);
+const initialValue: NisekoThemeContextProps = {
+  currentTheme: "light",
+  changeTheme: () => {},
+};
+
+export const NisekoThemeContext =
+  createContext<NisekoThemeContextProps>(initialValue);
